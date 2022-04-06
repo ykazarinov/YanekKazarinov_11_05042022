@@ -17,7 +17,7 @@ function Header() {
     
 
     return(
-        <div className="container">
+        <header className="container">
             <div className="row header">
                 <div className="col-6">
                     <Link to="/">
@@ -44,7 +44,7 @@ function Header() {
 
             </div>
 
-        </div>
+        </header>
     )
 }
 export default Header
