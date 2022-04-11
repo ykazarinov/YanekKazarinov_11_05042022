@@ -11197,4 +11197,52 @@ nav ul li a:hover {
   justify-content: center;
 }
 
+.content {
+  border-radius: 25px;
+  background-color: #F6F6F6;
+  padding: 1rem;
+}
+.content .row {
+  display: flex;
+  justify-content: center;
+}
+.content .row .my-card {
+  margin: 1rem;
+  background-size: cover;
+  width: calc(33.33% - 2rem - 0.66rem);
+  padding-bottom: calc(33.33% - 2rem - 0.66rem);
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.content .row .my-card:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 50%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: transparent;
+  background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.7));
+  opacity: 0.8;
+}
+.content .row .my-card .title {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  padding-right: 1rem;
+  font-size: 1.125rem;
+  color: #ffffff;
+  z-index: 10;
+}
+.content .row .my-card a {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
 /*# sourceMappingURL=style.css.map */
