@@ -21,6 +21,11 @@ $font_size: (
     font-family: 'Montserrat', sans-serif;
 }
 
+h1{
+    color: $color-principal;
+    font-size: map-get($font_size, '36px');
+}
+
 .header{
     display: flex;
     align-items: center;
@@ -155,8 +160,105 @@ nav{
         }
     }
 
+}
+.mySlider{
+    position: relative;
+    margin-bottom: 2rem;
 
-    
-    
 
+   
+
+
+    .slider-picture{
+        height: 415px;
+        object-fit: cover;
+        width: 100%;
+        border-radius: 25px;
+        overflow: hidden;
+
+        // transform: translateX(100%);
+    }
+
+    .slide-btn {
+        position: absolute;
+        width: 47px;
+        height: 80px;
+        top: calc(50% - 40px);
+        z-index: 1;
+        border: 0;
+        background-color: transparent;
+        &.slide-btn--left{
+            background-image: url('../images/left.svg');
+            left: 23px;
+        }
+        &.slide-btn--right{
+            background-image: url('../images/right.svg');
+            right: 23px;
+        }
+    }
+
+    .slide-number{
+        color: $footer_color;
+        font-size: map-get($font_size, '18px');
+        position: absolute;
+        bottom: 25px;
+        width: 2rem;
+        left: calc(50% - 1rem);
+        text-align: center;
+        z-index: 1;
+        white-space: nowrap;
+        
+        
+
+    }
+}
+
+.right_content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.host{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 2rem;
+    &-name{
+        color: $color-principal;
+        font-size: map-get($font_size, '18px');
+        text-align: right;
+        hyphens: auto;
+        width: auto;
+
+
+    }
+    &-image{
+        width: 4rem;
+        height: 4rem;
+        object-fit: cover;
+        border-radius: 2rem;
+        margin-left: 10px;
+
+    }
+}
+
+.location{
+    font-size: map-get($font_size, '18px');
+    color: $color-principal;
+    margin-bottom: 20px;
+}
+.tags{
+    display: flex;
+    .tag{
+        color: $footer_color;
+        background-color: $color-principal;
+        font-size: map-get($font_size, '14px');
+        line-height: 25px;
+        border-radius: 12px;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        margin-right: 10px;
+        margin-bottom: 1.5rem;
+    }
 }

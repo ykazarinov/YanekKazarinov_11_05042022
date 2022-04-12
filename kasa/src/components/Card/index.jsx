@@ -11,14 +11,13 @@ const CardImg = styled.div`
 
 function Card(props) {
 
-const id = props.id
-const title = props.title
-const cover = props.cover
+
+const {id, title, cover} = props
 
     return (
 
         <CardImg  picture={cover} className='col-lg-4 col-12 my-card' key={id}>
-            <Link to='/'>
+            <Link to={`/logement/${id}`}>
                 <div className='title'>{title}</div>
             </Link>
     

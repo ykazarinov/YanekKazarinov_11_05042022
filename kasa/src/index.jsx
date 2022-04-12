@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import './assets/css/style.css';
 import Home from './pages/Home/index';
 import Apropos from './pages/A-propos/index';
+import Logement from './pages/Logement/index'
 
 import Header from './components/Header/index'
 import Footer from './components/Footer/index'
@@ -22,18 +23,18 @@ root.render(
         {/* <GlobalStyle /> */}
         <Header />
         <Routes>
-        <Route exact path="/" element={<Home />} />
-        <Route exact path="/a-propos" element={<Apropos />} />
-        
-        {/* <Route path="/survey/:questionNumber" element={<Survey />} /> */}
+          <Route exact path="/" element={<Home />} />
+          <Route exact path="/a-propos" element={<Apropos />} />
           
+          <Route path="/logement/:logementId" element={<Logement />} />
+            
 
-        {/* <Route path="/results" element={<Results />} /> */}
-          
+          {/* <Route path="/results" element={<Results />} /> */}
+            
 
-        {/* <Route path="/freelances" element={<Freelances />} /> */}
-          
-        <Route element={<Error />} />
+          {/* <Route path="/freelances" element={<Freelances />} /> */}
+            
+          <Route element={<Error />} />
         </Routes>
         <Footer />
 
