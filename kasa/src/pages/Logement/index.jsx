@@ -3,14 +3,18 @@ import { useState } from 'react'
 import Data from '../../utils/data/logements.json'
 import Slider from '../../components/Slider/index'
 import Rating from '../../components/Rating/index'
-import React from 'react';
+import React from 'react'
 import Accordion from '../../components/Accordion'
+import Tag from '../../components/Tag'
 
 function Logement(){
 
     const { logementId } = useParams()
     const [myData, setMyData] = useState(Data)
     let appartement = myData.find(app => app.id === logementId)
+
+    const accordionTitle1 = 'Description'
+    const accordionTitle2 = 'Équipements'
 
     return(
         <React.StrictMode>
@@ -23,7 +27,8 @@ function Logement(){
                         <div className='tags'>
                             {
                                 appartement.tags && appartement.tags.map((tag, index) => (
-                                    <div className='tag' key={index}>{tag}</div>
+                                   
+                                    <Tag tag={tag} key={index}>{tag}</Tag>
                                 ))
                             }
                         </div>
@@ -39,13 +44,23 @@ function Logement(){
                 </div>
 
             </section>
-            <section className='container'>
-                <div className='row'>
-                    <div className='col-6'>
-                        <Accordion></Accordion>
+            <section className='container accord-container'>
+                <div className='row accord-row'>
+                    <div className='col-6 accord-col'>
+                        <Accordion 
+                            title={accordionTitle1} 
+                            content={appartement.description}
+                            startState='opened'>
+
+                        </Accordion>
                     </div>
-                    <div className='col-6'>
-                        <Accordion></Accordion>
+                    <div className='col-6 accord-col'>
+                        <Accordion 
+                            title={accordionTitle2} 
+                            content={appartement.equipments}
+                            startState='opened'>
+
+                        </Accordion>
                     </div>
                 </div>
 

@@ -20,18 +20,28 @@ function Slider(props){
         )
     }
 
+    function skiderNavigation(){
+         
+        return(
+            props.pictures.length === 1 ?
+            'invisible' :
+            ''
+
+        )
+    }
+
     return(
         <section className="container mySlider"> 
             <div className="row">
                 <div className="col-12">
-                    <button className='slide-btn slide-btn--left'
+                   
+                    <button className={`slide-btn slide-btn--left ${skiderNavigation()}`}
                         onClick={()=>changePicture(props.pictures[prevIndex()])}>
                     </button>
 
-                    <button className='slide-btn slide-btn--right'
+                    <button className={`slide-btn slide-btn--right ${skiderNavigation()}`}
                         onClick={()=>changePicture(props.pictures[nextIndex()])}>
                     </button>
-
                     <div className='slide-number'>{`${props.pictures.indexOf(picture) + 1} / ${props.pictures.length}` }</div>
 
                     <img src={picture} alt={title} className='slider-picture' />
