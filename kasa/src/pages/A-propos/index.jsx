@@ -21,7 +21,7 @@ function Apropos() {
               <React.StrictMode key={'strict' +  Math.floor(Math.random() * 100)}>
                 <div className='col-lg-1 col-sm-0'></div>
                 <div className='col-lg-10 col-sm-12 accord-col'>
-                  <Accordion key={title.split(' ')[0] + index } title={title} content={content} startState='opened'></Accordion>
+                  <Accordion key={title.split(' ')[0] + index  +  Math.floor(Math.random() * 100)} title={title} content={content} startState='opened'></Accordion>
                  
                 </div>
                 <div className='col-lg-1 col-sm-0'></div>
