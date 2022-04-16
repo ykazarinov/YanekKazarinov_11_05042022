@@ -1,6 +1,4 @@
 import React from "react"
-import ArrowTop from '../../assets/images/arrow_top.svg'
-import ArrowDown from '../../assets/images/arrow_down.svg'
 import {useState} from 'react'
 
 

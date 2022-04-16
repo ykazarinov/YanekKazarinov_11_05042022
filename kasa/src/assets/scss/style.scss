@@ -168,34 +168,10 @@ nav{
 }
 
 
-// .mySlider{
-//     position: relative;
-//     margin-bottom: 2rem;
-
-//     .slider-cont{
-//         height: 415px;
-//         overflow: hidden;
-//         display: flex;
-//         flex-shrink: 0;
-//     }
-   
-
-
-//     .slider-picture{
-//         height: 415px;
-//         object-fit: cover;
-//         width: 100%;
-//         border-radius: 25px;
-//         overflow: hidden;
-
-//         // transform: translateX(100%);
-//     }
-
 .slider {
     position: relative;
     width: 100%;
     height: 415px;
-    // margin: auto;
     box-sizing: border-box;
     display: flex;
     align-items: center;
@@ -272,7 +248,6 @@ nav{
         z-index: 1;
         white-space: nowrap;
         
-        
 
     }
 }
@@ -334,9 +309,6 @@ nav{
     &-row{
         display: flex;
         align-items: stretch;
-    }
-    &-col{
-
     }
 
 }
@@ -406,7 +378,6 @@ nav{
         }
         .accordion--content{
             transition: all .3s ease;
-            // transform: scaleY(1);
             transform-origin: top;
             height: auto;
             overflow: hidden;
@@ -426,7 +397,6 @@ nav{
         }
         .accordion--content{
             transition: all .3s ease;
-            // transform: scaleY(0);
             transform-origin: top;
             height: 0px;
             padding: 0px;

@@ -1,12 +1,10 @@
 import styled from 'styled-components'
 
     const BannerImg = styled.div`
-
         background-image: ${({ picture }) => (`url('${picture}')`)};
     `
 
 function Banner({title, picture}) {
-
 
     return(
         <section className="container">

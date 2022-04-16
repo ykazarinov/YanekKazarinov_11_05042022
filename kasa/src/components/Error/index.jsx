@@ -8,7 +8,7 @@ function Error() {
                 <div className='col-12 center-page'>
                     <h1 className='error-404'>404</h1>
                     <div className='error-text'>Oups! La page que vous demandez n'existe pas.</div>
-                    <Link to='/' className='error-link'>Retourner sur la page d’accueil</Link>
+                    <Link to='/' className='error-link'>Retourner sur la page d'accueil</Link>
                 </div>
             </div>
             

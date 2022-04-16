@@ -14,8 +14,6 @@ function Header() {
         }
     ]
 
-    
-
     return(
         <header className="container">
             <div className="row header">
@@ -34,16 +32,11 @@ function Header() {
                                 </Link>
                             </li>
                         )
-
                         )}
-                      
-                       
                     </ul>
                     </nav>
                 </div>
-
             </div>
-
         </header>
     )
 }

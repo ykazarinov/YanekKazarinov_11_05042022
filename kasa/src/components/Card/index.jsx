@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom'
 
 
 const CardImg = styled.div`
-
     background-image: ${({ picture }) => (`url('${picture}')`)};
 
 `

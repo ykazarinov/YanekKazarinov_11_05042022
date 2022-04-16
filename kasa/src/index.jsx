@@ -9,28 +9,22 @@ import Logement from './pages/Logement/index'
 import Header from './components/Header/index'
 import Footer from './components/Footer/index'
 import Error from './components/Error/index'
-// import GlobalStyle from './utils/style/GlobalStyle'
 import { createRoot } from 'react-dom/client';
 
 const container = document.getElementById('root');
 const root = createRoot(container);
-// root.render(<App tab="home" />);
 
 root.render(
   <React.StrictMode>
   <Router>
-   
-        {/* <GlobalStyle /> */}
-        <Header />
-        <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route exact path="/a-propos" element={<Apropos />} />
-          
-          <Route path="/logement/:logementId" element={<Logement />} />
-            
-          <Route path='*' element={<Error />} />
-        </Routes>
-        <Footer />
+    <Header />
+      <Routes>
+        <Route exact path="/" element={<Home />} />
+        <Route exact path="/a-propos" element={<Apropos />} />
+        <Route exact path="/logement/:logementId" element={<Logement />} />
+        <Route path='*' element={<Error />} />
+      </Routes>
+    <Footer />
 
   </Router>
 </React.StrictMode>
