@@ -18,12 +18,13 @@ function Apropos() {
       <section className='container accord-container'>
         <div className='row accord-row'>
             {myData.map(({title, content}, index)=>(
-              <React.StrictMode>
-                <div className='col-2'></div>
-                <div className='col-8 accord-col'>
-                  <Accordion key={index} title={title} content={content} startState='closed'></Accordion>
+              <React.StrictMode key={'strict' +  Math.floor(Math.random() * 100)}>
+                <div className='col-lg-1 col-sm-0'></div>
+                <div className='col-lg-10 col-sm-12 accord-col'>
+                  <Accordion key={title.split(' ')[0] + index } title={title} content={content} startState='opened'></Accordion>
+                 
                 </div>
-                <div className='col-2'></div>
+                <div className='col-lg-1 col-sm-0'></div>
               </React.StrictMode>
             ))}
         </div>

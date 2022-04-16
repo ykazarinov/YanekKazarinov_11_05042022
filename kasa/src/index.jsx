@@ -28,13 +28,7 @@ root.render(
           
           <Route path="/logement/:logementId" element={<Logement />} />
             
-
-          {/* <Route path="/results" element={<Results />} /> */}
-            
-
-          {/* <Route path="/freelances" element={<Freelances />} /> */}
-            
-          <Route element={<Error />} />
+          <Route path='*' element={<Error />} />
         </Routes>
         <Footer />
 

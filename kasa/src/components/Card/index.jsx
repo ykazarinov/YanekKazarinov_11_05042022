@@ -16,7 +16,7 @@ const {id, title, cover} = props
 
     return (
 
-        <CardImg  picture={cover} className='col-lg-4 col-12 my-card' key={id}>
+        <CardImg  picture={cover} className='col-lg-4 col-sm-12 my-card' key={id}>
             <Link to={`/logement/${id}`}>
                 <div className='title'>{title}</div>
             </Link>

@@ -19,12 +19,12 @@ function Header() {
     return(
         <header className="container">
             <div className="row header">
-                <div className="col-6">
+                <div className="col-4">
                     <Link to="/">
                         <img className='logo' src={Logo} alt='Kasa logo' />
                     </Link>
                 </div>
-                <div className="col-6">
+                <div className="col-8">
                     <nav>
                     <ul>
                         {menu.map((item, index) => (

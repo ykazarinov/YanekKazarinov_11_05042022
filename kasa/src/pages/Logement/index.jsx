@@ -6,13 +6,21 @@ import Rating from '../../components/Rating/index'
 import React from 'react'
 import Accordion from '../../components/Accordion'
 import Tag from '../../components/Tag'
+import {Navigate} from 'react-router-dom'
 
 function Logement(){
 
     const { logementId } = useParams()
     const [myData, setMyData] = useState(Data)
+
+    //поставить условие: если аппортемент = 0
+    
     let appartement = myData.find(app => app.id === logementId)
 
+    if(!appartement){
+        return <Navigate to='*' />
+        
+    }
     const accordionTitle1 = 'Description'
     const accordionTitle2 = 'Équipements'
 
@@ -20,8 +28,8 @@ function Logement(){
         <React.StrictMode>
             <Slider pictures={appartement.pictures} title={appartement.title}></Slider>
             <section className='container'>
-                <div className='row'>
-                    <div className='col-8'>
+                <div className='row options_row'>
+                    <div className='col-lg-8 col-sm-12 options_cont'>
                         <h1>{appartement.title}</h1>
                         <div className='location'>{appartement.location}</div>
                         <div className='tags'>
@@ -33,7 +41,7 @@ function Logement(){
                             }
                         </div>
                     </div>
-                    <div className='col-4 right_content'>
+                    <div className='col-lg-4 col-sm-12 right_content'>
                         <div className='host'>
                             <div className='host-name'>{appartement.host.name}</div>
                             <img src={appartement.host.picture} alt={appartement.host.name} className='host-image' />
@@ -46,7 +54,7 @@ function Logement(){
             </section>
             <section className='container accord-container'>
                 <div className='row accord-row'>
-                    <div className='col-6 accord-col'>
+                    <div className='col-lg-6 col-sm-12 accord-col'>
                         <Accordion 
                             title={accordionTitle1} 
                             content={appartement.description}
@@ -54,7 +62,7 @@ function Logement(){
 
                         </Accordion>
                     </div>
-                    <div className='col-6 accord-col'>
+                    <div className='col-lg-6 col-sm-12 accord-col'>
                         <Accordion 
                             title={accordionTitle2} 
                             content={appartement.equipments}
